@@ -17,7 +17,7 @@ namespace Recrutement
         public Statut Statut { get; private set; }
         public Candidat Candidat { get; private set; } 
         public Recruteur Recruteur { get; private set; }
-        private Creneau creneau;
+        public Creneau Creneau { get; private set; }
 
         public void Confirmer() {
             this.Statut.Confirmer();

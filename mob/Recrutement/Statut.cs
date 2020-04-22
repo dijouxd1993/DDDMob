@@ -10,8 +10,8 @@ namespace Recrutement
             this.Etat = EStatut.EnAttente;
         }
 
-        public EStatut Etat { get; set; }
-        public string Raison { get; set; } 
+        public EStatut Etat { get; private set; }
+        public string Raison { get; private set; } 
 
         public void Annuler(string raison){
             this.Etat = EStatut.Annule;
