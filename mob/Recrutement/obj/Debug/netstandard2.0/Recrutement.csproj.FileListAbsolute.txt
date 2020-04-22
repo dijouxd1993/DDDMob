@@ -1,0 +1,8 @@
+/home/ubu/Dev/DDD/mob/Recrutement/obj/Debug/netstandard2.0/Recrutement.csprojAssemblyReference.cache
+/home/ubu/Dev/DDD/mob/Recrutement/obj/Debug/netstandard2.0/Recrutement.AssemblyInfoInputs.cache
+/home/ubu/Dev/DDD/mob/Recrutement/obj/Debug/netstandard2.0/Recrutement.AssemblyInfo.cs
+/home/ubu/Dev/DDD/mob/Recrutement/bin/Debug/netstandard2.0/Recrutement.deps.json
+/home/ubu/Dev/DDD/mob/Recrutement/bin/Debug/netstandard2.0/Recrutement.dll
+/home/ubu/Dev/DDD/mob/Recrutement/bin/Debug/netstandard2.0/Recrutement.pdb
+/home/ubu/Dev/DDD/mob/Recrutement/obj/Debug/netstandard2.0/Recrutement.dll
+/home/ubu/Dev/DDD/mob/Recrutement/obj/Debug/netstandard2.0/Recrutement.pdb
