@@ -9,7 +9,7 @@ namespace Recrutement
             this.Prenom = prenom;
             this.DateNaissance = dateNaissance;
         }
-        
+
         public string Nom { get; private set; }
         public string Prenom { get; private set; }  
         public DateTime DateNaissance { get; private set; }
