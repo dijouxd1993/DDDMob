@@ -16,5 +16,14 @@ namespace RecrutementTest
 
             Assert.Equal("Il ne peut pas y avoir d'entretien le week-end", ex.Message);
         }
+
+        [Fact]
+        public void LeCreneauDoitEtreUnJourDeSemaine()
+        {
+            Creneau creneau = new Creneau(new DateTime(2020,04,22),new TimeSpan(0,30,0)); 
+
+
+            Assert.Equal(creneau.Debut, new DateTime(2020,04,22));
+        }
     }
 }
