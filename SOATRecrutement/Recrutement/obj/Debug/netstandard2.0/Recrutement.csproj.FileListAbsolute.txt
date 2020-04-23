@@ -1,0 +1,8 @@
+/home/ubu/Documents/ESGI/ProjetDDD/SOATRecrutement/Recrutement/bin/Debug/netstandard2.0/Recrutement.deps.json
+/home/ubu/Documents/ESGI/ProjetDDD/SOATRecrutement/Recrutement/bin/Debug/netstandard2.0/Recrutement.dll
+/home/ubu/Documents/ESGI/ProjetDDD/SOATRecrutement/Recrutement/bin/Debug/netstandard2.0/Recrutement.pdb
+/home/ubu/Documents/ESGI/ProjetDDD/SOATRecrutement/Recrutement/obj/Debug/netstandard2.0/Recrutement.csprojAssemblyReference.cache
+/home/ubu/Documents/ESGI/ProjetDDD/SOATRecrutement/Recrutement/obj/Debug/netstandard2.0/Recrutement.AssemblyInfoInputs.cache
+/home/ubu/Documents/ESGI/ProjetDDD/SOATRecrutement/Recrutement/obj/Debug/netstandard2.0/Recrutement.AssemblyInfo.cs
+/home/ubu/Documents/ESGI/ProjetDDD/SOATRecrutement/Recrutement/obj/Debug/netstandard2.0/Recrutement.dll
+/home/ubu/Documents/ESGI/ProjetDDD/SOATRecrutement/Recrutement/obj/Debug/netstandard2.0/Recrutement.pdb
