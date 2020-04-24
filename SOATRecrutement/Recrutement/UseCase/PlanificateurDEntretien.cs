@@ -64,15 +64,6 @@ namespace Recrutement
 
         public Entretien planifier()
         {
-            if(Candidat?.NbAnneesExp >= Recruteur?.NbAnneesExp)
-                throw new Exception("Le recruteur doit être plus expérimenté");
-            
-            if (Candidat.Competence.HasFlag(competenceTestee))
-                throw new Exception("Le candidat doit avoir la compétence testée.");
-            
-            if (Recruteur.Competence.HasFlag(competenceTestee))
-                throw new Exception("Le recruteur doit avoir la compétence testée.");
-            
             return new Entretien(creneau, candidat, recruteur, competenceTestee, salle);
         }
     }

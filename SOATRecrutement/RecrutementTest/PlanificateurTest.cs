@@ -15,7 +15,7 @@ namespace RecrutementTest
 		}*/
 
 
-		[Fact]
+		/*[Fact]
 		public void LeRecruteurDoitEtrePlusExperimente()
 		{
 			Recruteur recruteur = new Recruteur("", "", DateTime.Now, Competence.JavaScript, 5);
@@ -55,6 +55,6 @@ namespace RecrutementTest
             });
 
             Assert.Equal("Le recruteur doit avoir la compétence testée.", ex.Message);
-		}
+		}*/
 	}
 }

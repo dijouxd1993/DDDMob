@@ -11,7 +11,15 @@ namespace Recrutement
             this.Creneau = creneau;
             this.Candidat = candidat;
             this.Recruteur = recruteur;
-            this.Salle = salle;   
+            this.Salle = salle;
+            if(candidat.NbAnneesExp >= recruteur.NbAnneesExp)
+                throw new Exception("Le recruteur doit être plus expérimenté");
+            
+            if (!candidat.Competence.HasFlag(competencesTestees))
+                throw new Exception("Le candidat doit avoir la compétence testée.");
+            
+            if (!recruteur.Competence.HasFlag(competencesTestees))
+                throw new Exception("Le recruteur doit avoir la compétence testée.");
         }
 
         public Salle Salle { get; set; }

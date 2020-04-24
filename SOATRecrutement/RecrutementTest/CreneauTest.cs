@@ -11,7 +11,7 @@ namespace RecrutementTest
         {
             
             Exception ex = Assert.Throws<Exception>(() => {
-                Creneau creneau = new Creneau(new DateTime(2020,04,25),new TimeSpan(1,0,0));
+                Creneau creneau = new Creneau(new DateTime(2020,04,25,18,0,0),new TimeSpan(1,0,0));
             });
 
             Assert.Equal("Il ne peut pas y avoir d'entretien le week-end", ex.Message);
@@ -20,8 +20,8 @@ namespace RecrutementTest
         [Fact]
         public void LeCreneauDoitEtreUnJourDeSemaine()
         {
-            Creneau creneau = new Creneau(new DateTime(2020,04,22),new TimeSpan(1,0,0)); 
-            Assert.Equal(creneau.Debut, new DateTime(2020,04,22));
+            Creneau creneau = new Creneau(new DateTime(2020,04,22,18,0,0),new TimeSpan(1,0,0)); 
+            Assert.Equal(creneau.Debut, new DateTime(2020,04,22,18,0,0));
         }
 
         [Fact]
@@ -58,13 +58,5 @@ namespace RecrutementTest
             Assert.Equal(creneau.Debut, new DateTime(2020,04,24,19,0,0));
         }
 
-        [Fact]
-        public void ee()
-        {
-            Candidat c = new Candidat("","",DateTime.Now, Competence.Java, 2);
-            c.Competence = Competence.Java | Competence.DotNet;
-
-            System.Console.WriteLine(c.Competence);
-        }
     }
 }
