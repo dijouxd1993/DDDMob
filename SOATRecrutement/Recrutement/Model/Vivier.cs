@@ -22,13 +22,13 @@ namespace Recrutement
             vivier.Remove(candidat);
         }
 
-        public void FiltrerParCompetences(Competence competences)
+        public List<Candidat> FiltrerParCompetences(Competence competences)
             => vivier.FindAll((c) => c.Competence.HasFlag(competences));
         
-        public void FiltrerParNomPrenom(String nom)
+        public List<Candidat> FiltrerParNomPrenom(String nom)
             => vivier.FindAll((c) => c.Nom == nom || c.Prenom ==nom);
         
-        
+
 
     }
 }

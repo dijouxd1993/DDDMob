@@ -20,7 +20,7 @@ namespace RecrutementTest
 		{
 			Recruteur recruteur = new Recruteur("", "", DateTime.Now, Competence.JavaScript, 5);
 			Candidat candidat = new Candidat("", "", DateTime.Now, Competence.JavaScript, 10);
-			PlanificateurDEntretien planif = new PlanificateurDEntretien(recruteur, candidat, new Salle(), null, Competence.JavaScript);
+			PlanificateurDEntretien planif = new PlanificateurDEntretien(recruteur, candidat, new Salle(""), null, Competence.JavaScript);
 
 			Exception ex = Assert.Throws<Exception>(() => {
                 planif.planifier();
@@ -34,7 +34,7 @@ namespace RecrutementTest
 		{
 			Recruteur recruteur = new Recruteur("", "", DateTime.Now, Competence.JavaScript, 5);
 			Candidat candidat = new Candidat("", "", DateTime.Now, Competence.Java, 10);
-			PlanificateurDEntretien planif = new PlanificateurDEntretien(recruteur, candidat, new Salle(), null, Competence.JavaScript);
+			PlanificateurDEntretien planif = new PlanificateurDEntretien(recruteur, candidat, new Salle(""), null, Competence.JavaScript);
 
 			Exception ex = Assert.Throws<Exception>(() => {
                 planif.planifier();
@@ -46,7 +46,15 @@ namespace RecrutementTest
 		[Fact]
 		public void LeRecruteurDoitAvoirLaCompetenceTestee()
 		{
+			Recruteur recruteur = new Recruteur("", "", DateTime.Now, Competence.Java, 5);
+			Candidat candidat = new Candidat("", "", DateTime.Now, Competence.JavaScript, 10);
+			PlanificateurDEntretien planif = new PlanificateurDEntretien(recruteur, candidat, new Salle(""), null, Competence.JavaScript);
 
+			Exception ex = Assert.Throws<Exception>(() => {
+                planif.planifier();
+            });
+
+            Assert.Equal("Le recruteur doit avoir la compétence testée.", ex.Message);
 		}
 	}
 }
