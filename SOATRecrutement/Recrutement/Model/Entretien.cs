@@ -4,7 +4,7 @@ namespace Recrutement
 {
     public class Entretien
     {
-        public Entretien(Creneau creneau, Candidat candidat, Recruteur recruteur)
+        public Entretien(Creneau creneau, Candidat candidat, Recruteur recruteur, Competence competencesTestees)
         {
             this.EntretienId = new Guid();
             this.Statut =  new Statut();
@@ -18,6 +18,13 @@ namespace Recrutement
         public Candidat Candidat { get; private set; } 
         public Recruteur Recruteur { get; private set; }
         public Creneau Creneau { get; private set; }
+
+        private Competence competencesTestees;
+        public Competence CompetencesTestees
+        {
+            get { return competencesTestees; }
+            set { competencesTestees = value; }
+        }
 
         public void Confirmer() {
             this.Statut.Confirmer();

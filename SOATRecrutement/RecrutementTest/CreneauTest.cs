@@ -11,8 +11,8 @@ namespace RecrutementTest
         {
             
             Exception ex = Assert.Throws<Exception>(() => {
-                Creneau creneau = new Creneau(new DateTime(2020,04,25),new TimeSpan(0,30,0));
-                });
+                Creneau creneau = new Creneau(new DateTime(2020,04,25),new TimeSpan(1,0,0));
+            });
 
             Assert.Equal("Il ne peut pas y avoir d'entretien le week-end", ex.Message);
         }
@@ -20,16 +20,48 @@ namespace RecrutementTest
         [Fact]
         public void LeCreneauDoitEtreUnJourDeSemaine()
         {
-            Creneau creneau = new Creneau(new DateTime(2020,04,22),new TimeSpan(0,30,0)); 
-
-
+            Creneau creneau = new Creneau(new DateTime(2020,04,22),new TimeSpan(1,0,0)); 
             Assert.Equal(creneau.Debut, new DateTime(2020,04,22));
+        }
+
+        [Fact]
+        public void LeCreneauNeDoitPasCommencerAvant18h()
+        {
+            
+            Exception ex = Assert.Throws<Exception>(() => {
+                Creneau creneau = new Creneau(new DateTime(2020,04,24,17,0,0),new TimeSpan(1,0,0));
+            });
+            Assert.Equal("Un créneau doit commencer au moins à 18h.", ex.Message);
+        }
+
+        [Fact]
+        public void LeCreneauDoitPasCommencerApres18h()
+        {
+            Creneau creneau = new Creneau(new DateTime(2020,04,24,19,0,0),new TimeSpan(1,0,0));
+            Assert.Equal(creneau.Debut, new DateTime(2020,04,24,19,0,0));
+        }
+
+        [Fact]
+        public void LeCreneauNeDoitPasDuree4h()
+        {
+            
+            Exception ex = Assert.Throws<Exception>(() => {
+                Creneau creneau = new Creneau(new DateTime(2020,04,24,18,0,0),new TimeSpan(4,0,0));
+            });
+            Assert.Equal("La durée d'un créneau doit être d'une, deux ou trois heures.", ex.Message);
+        }
+
+        [Fact]
+        public void LeCreneauDoitPouvoirDurer2h()
+        {
+            Creneau creneau = new Creneau(new DateTime(2020,04,24,19,0,0), new TimeSpan(2,0,0));
+            Assert.Equal(creneau.Debut, new DateTime(2020,04,24,19,0,0));
         }
 
         [Fact]
         public void ee()
         {
-            Candidat c = new Candidat("","",DateTime.Now);
+            Candidat c = new Candidat("","",DateTime.Now, Competence.Java, 2);
             c.Competence = Competence.Java | Competence.DotNet;
 
             System.Console.WriteLine(c.Competence);

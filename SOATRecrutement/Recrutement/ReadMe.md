@@ -15,3 +15,5 @@ Les compétences : Java, .Net, JS
 Tous les RDV sont les soir à partir de 18H00 pour une durée de 1, 2 ou 3 Heurs
 
 Depuis une API Web (que vous allez mocker et simuler) je reçois la liste des Consultat Recruteurs et leur disponibilités pour le mois en cours
+
+Les années d'expérience du recruteur doit être supérieures aux nombres d'années d'expérience du candidat

@@ -5,27 +5,29 @@ namespace RecrutementTest
 {
     public class EntretienTest
     {
+        
+
         [Fact]
         public void LEntretienDoitEtreAnnule()
         {
-            Entretien entretien = new Entretien(new Creneau(new DateTime(2020,04,22), new TimeSpan()), new Candidat("","",DateTime.Now), new Recruteur("","",DateTime.Now));
+            Entretien entretien = new Entretien(new Creneau(new DateTime(2020,04,22), new TimeSpan()), new Candidat("","",DateTime.Now,Competence.Java,1), new Recruteur("","",DateTime.Now,Competence.Java,1), Competence.Java);
             entretien.Annuler("Ceci est une raison");
-            Assert.Equal(entretien.Statut.Etat, EStatut.Annule);
+            Assert.Equal(EStatut.Annule, entretien.Statut.Etat);
         }
 
         [Fact]
         public void LEntretienDoitEtreEnAttente()
         {
-            Entretien entretien = new Entretien(new Creneau(new DateTime(2020,04,22), new TimeSpan()), new Candidat("","",DateTime.Now), new Recruteur("","",DateTime.Now));
-            Assert.Equal(entretien.Statut.Etat, EStatut.EnAttente);
+            Entretien entretien = new Entretien(new Creneau(new DateTime(2020,04,22), new TimeSpan()), new Candidat("","",DateTime.Now,Competence.Java,1), new Recruteur("","",DateTime.Now,Competence.Java,1), Competence.Java);
+            Assert.Equal(EStatut.EnAttente, entretien.Statut.Etat);
         }
 
         [Fact]
         public void LEntretienDoitEtreConfirme()
         {
-            Entretien entretien = new Entretien(new Creneau(new DateTime(2020,04,22), new TimeSpan()), new Candidat("","",DateTime.Now), new Recruteur("","",DateTime.Now));
+            Entretien entretien = new Entretien(new Creneau(new DateTime(2020,04,22), new TimeSpan()), new Candidat("","",DateTime.Now,Competence.Java,1), new Recruteur("","",DateTime.Now,Competence.Java,1), Competence.Java);
             entretien.Confirmer();
-            Assert.Equal(entretien.Statut.Etat, EStatut.Confirme);
+            Assert.Equal(EStatut.Confirme, entretien.Statut.Etat);
         }
     }
 }
